@@ -1,0 +1,30 @@
+{
+  "name": "questionify",
+  "description": "Questionify simplifies the code for asking and answering questions.",
+  "main": "index.js",
+  "authors": [
+    "Russell Steadman"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "question",
+    "answer",
+    "ask",
+    "multiple",
+    "choice",
+    "tutorial"
+  ],
+  "homepage": "https://github.com/teamtofu/questionify",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "_config.yml",
+    "errors",
+    "docs",
+    "CNAME",
+    "index.md"
+  ]
+}

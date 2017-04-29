@@ -1,0 +1,54 @@
+{
+  "name": "questionify",
+  "version": "1.0.0",
+  "description": "Questionify simplifies the code for asking and answering questions.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Use http-server (npm) and open the test directory.\" && exit 0",
+    "gulp": "gulp",
+    "jshint": "jshint --verbose dist/questionify.js",
+    "eslint": "eslint -c .eslintrc.json dist/questionify.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamtofu/questionify.git"
+  },
+  "keywords": [
+    "question",
+    "answer",
+    "ask",
+    "multiple",
+    "choice",
+    "tutorial"
+  ],
+  "author": "Russell Steadman",
+  "organization": "Russell Steadman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teamtofu/questionify/issues"
+  },
+  "homepage": "https://questionify.js.org/",
+  "autoupdate": {
+    "source": "git",
+    "target": "git://github.com/teamtofu/questionify.git",
+    "basePath": "/dist",
+    "files": [
+      "questionify.js",
+      "questionify.min.js"
+    ]
+  },
+  "devDependencies": {
+    "ajv": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-file-insert": "^1.0.3",
+    "gulp-iife": "^0.3.0",
+    "gulp-license": "^1.1.0",
+    "gulp-minify": "0.0.15",
+    "gulp-regex-replace": "^0.2.3",
+    "gulp-shell": "^0.6.3",
+    "webpack": "^2.3.3"
+  }
+}

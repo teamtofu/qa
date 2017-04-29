@@ -1,0 +1,38 @@
+{
+    "content": {
+        "default": {
+            "id": "703fda70-cb9e-40a6-9fcb-dbe7b8167123",
+            "questions": []
+        },
+        "fun": {
+            "id": "b45b36fd-17f2-4a34-80d2-6d473cf202ee",
+            "questions": [
+                {
+                    "group": "fun",
+                    "id": "0904c0b9-8c11-4a1b-a480-e415bc4d7da3",
+                    "question": {
+                        "text": "What?"
+                    },
+                    "answers": [
+                        {
+                            "text": "Correct",
+                            "id": "82286325-4a29-4589-ab3e-e4863dbeeed7",
+                            "correct": true
+                        },
+                        {
+                            "text": "Wrong",
+                            "id": "4eac4707-f775-465b-81bb-40219ea619cd",
+                            "correct": false
+                        }
+                    ],
+                    "correct": [
+                        "82286325-4a29-4589-ab3e-e4863dbeeed7"
+                    ]
+                }
+            ]
+        }
+    },
+    "version": "1.0.0",
+    "type": "export",
+    "schema": "qu-1.0"
+}

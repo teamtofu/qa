@@ -1,0 +1,81 @@
+{
+    "title": "Questionify Combined Quiz",
+    "type": "object",
+    "properties": {
+        "content": {
+            "meta": {
+                "type": "object"
+            },
+            "quiz": {
+                "description": "This contains an array of questions for the quiz.",
+                "type": "array",
+                "items": {
+                    "description": "Individual question object",
+                    "type": "object",
+                    "properties": {
+                        "group": {
+                            "type": "string"
+                        },
+                        "id": {
+                            "type": "string"
+                        },
+                        "question": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": ["text"]
+                        },
+                        "answers": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "text": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "correct": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "required": ["text", "id", "correct"]
+                            }
+                        },
+                        "correct": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": ["group", "id", "question", "answers", "correct"]
+                }
+            }
+        },
+        "type": {
+            "description": "Type of Questionify Object",
+            "type": "string",
+            "const": "quizCombo"
+        },
+        "version": {
+            "description": "Version of the generator code",
+            "type": "string",
+            "pattern": "[vV]*[0-9]+\\.[0-9]+\\.[0-9]+"
+        },
+        "schema": {
+            "description": "The schema type, for compatibility",
+            "type": "string",
+            "pattern": "qu\\-[0-9]+\\.[0-9]+"
+        },
+        "assetid": {
+            "description": "A UUID for the quiz",
+            "type": "string"
+        }
+    },
+    "required": ["content", "type", "version", "schema", "assetid"]
+}

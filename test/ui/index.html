@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width">
+  <title>Questionify UI</title>
+
+  <script src="../../dist/questionify.js"></script>
+
+</head>
+
+<body>
+</body>
+
+<script>
+  qu.addQuestion('What? !(https://unatetra.github.io/projects/questionify/logo.svg)[example classes]!', ['Correct','Wrong'], [0], 'fun');
+  qu.addQuestion('Other Question?', ['Correct','Wrong'], [0], 'fun');
+  window.quiz = qu.createQuiz('fun', 'Cool Quiz', null);
+  document.body.innerHTML = qu.getQuizTemplate(function(a){console.log(qu.gradeQuiz(a))});
+</script>
+</html>

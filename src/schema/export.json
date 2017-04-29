@@ -1,0 +1,90 @@
+{
+	"title": "Questionify Export",
+	"type": "object",
+	"properties": {
+		"content": {
+			"type": "object",
+			"additionalProperties": {
+				"description": "These are the question groups.",
+				"type": "object",
+				"properties": {
+					"id": {
+						"description": "This is the UUID for the group.",
+						"type": "string"
+					},
+					"questions": {
+						"description": "This contains an array of questions for the group.",
+						"type": "array",
+						"items": {
+							"description": "Individual question object",
+							"type": "object",
+							"properties": {
+								"group": {
+									"type": "string"
+								},
+								"id": {
+									"type": "string"
+								},
+								"question": {
+									"type": "object",
+									"properties": {
+										"text": {
+											"type": "string"
+										}
+									},
+									"required": ["text"]
+								},
+								"answers": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"text": {
+												"type": "string"
+											},
+											"id": {
+												"type": "string"
+											},
+											"correct": {
+												"type": "boolean"
+											}
+										},
+										"required": ["text","id","correct"]
+									}
+								},
+								"correct": {
+									"type": "array",
+									"items": {
+										"type": "string"
+									}
+								}
+							},
+							"required": ["group","id","question","answers","correct"]
+						}
+					}
+				},
+				"required": ["id","questions"]
+			}
+		},
+		"type": {
+			"description": "Type of Questionify Object",
+			"type": "string",
+			"const": "export"
+		},
+		"version": {
+			"description": "Version of the generator code",
+			"type": "string",
+			"pattern": "[vV]*[0-9]+\\.[0-9]+\\.[0-9]+"
+		},
+		"schema": {
+			"description": "The schema type, for compatibility",
+			"type": "string",
+			"pattern": "qu\\-[0-9]+\\.[0-9]+"
+		},
+		"assetid": {
+			"description": "A UUID for the export",
+			"type": "string"
+		}
+	},
+	"required": ["content","type","version","schema","assetid"]
+}

@@ -1,0 +1,51 @@
+{
+    "title": "Questionify Answer Key",
+    "type": "object",
+    "properties": {
+        "content": {
+            "type": "object",
+            "properties": {
+                "meta": {
+                    "type": "object"
+                },
+                "key": {
+                    "type": "array",
+                    "items": {
+                        "id": {
+                            "description": "The UUID of the question",
+                            "type": "string"
+                        },
+                        "correct": {
+                            "description": "An array of all correct answers for a question",
+                            "type": "array",
+                            "items": {
+                                "description": "UUID of a correct answer",
+                                "type":"string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "type": {
+            "description": "Type of Questionify Object",
+            "type": "string",
+            "const": "quizCombo"
+        },
+        "version": {
+            "description": "Version of the generator code",
+            "type": "string",
+            "pattern": "[vV]*[0-9]+\\.[0-9]+\\.[0-9]+"
+        },
+        "schema": {
+            "description": "The schema type, for compatibility",
+            "type": "string",
+            "pattern": "qu\\-[0-9]+\\.[0-9]+"
+        },
+        "assetid": {
+            "description": "A UUID for the quiz",
+            "type": "string"
+        }
+    },
+    "required": ["content", "type", "version", "schema", "assetid"]
+}
